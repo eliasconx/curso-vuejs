@@ -1,7 +1,5 @@
 # vue-youtube
-
-> A Vue.js project
-
+>Hola, bienvenido al repositorio del curso de youtube del canal de https://eliasconx.com
 ## Build Setup
 
 ``` bash
