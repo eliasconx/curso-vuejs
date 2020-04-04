@@ -1,0 +1,71 @@
+<template>
+  <div id="app">
+    {{ msg }}
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'app',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App',
+      hola: "hola"
+    }
+  },
+  methods: {
+    holaMundo() {
+      this.msg = "Hola Mundo";
+    },
+    holaMundo2() {
+
+    }
+  },
+  beforeCreate: function () {
+    console.log("Esto pasa antes de que sea creado el componente");
+  },
+  created: function() {
+    console.log("Estoy pasa cuando ya ha sido creado");
+  },
+  mounted: function () {
+    // multiples
+
+    console.log("Ya fui montado, pero no he llamado a holaMundo y msg vale"  + this.msg);
+    this.holaMundo();
+    console.log("El valor de msg ha sido cambiado a: " + this.msg);
+  },
+  updated: function () {
+    console.log("he sido actualizado");
+  }
+  
+}
+</script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+h1, h2 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
+}
+</style>
